@@ -1,0 +1,98 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/31/20/11/lego-1297582_1280.png",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "RC Racing Car TurboX",
+    "sellerName": "SpeedyToys BD",
+    "sellerEmail": "info@speedytoys.com",
+    "price": 59.99,
+    "rating": 4.5,
+    "availableQuantity": 40,
+    "description": "High-speed remote control car with turbo boost and rechargeable battery. Perfect for indoor and outdoor fun.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/02/01/12/16/radio-controlled-2031372_1280.jpg",
+    "subCategory": "Remote Control Toys"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Barbie Dream Doll",
+    "sellerName": "LovelyToys Shop",
+    "sellerEmail": "support@lovelytoys.com",
+    "price": 34.99,
+    "rating": 4.8,
+    "availableQuantity": 60,
+    "description": "Beautiful Barbie doll with stylish dress and accessories. Great for imaginative play and storytelling.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/04/04/17/55/barbie-2200730_1280.jpg",
+    "subCategory": "Dolls & Plushies"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Smart Learning Tablet for Kids",
+    "sellerName": "EduFun Zone",
+    "sellerEmail": "help@edufun.com",
+    "price": 69.99,
+    "rating": 4.6,
+    "availableQuantity": 50,
+    "description": "Interactive tablet that helps kids learn letters, numbers, and shapes through fun games and songs.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2018/02/07/22/42/tablet-3130029_1280.jpg",
+    "subCategory": "Educational Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Kids Basketball Set",
+    "sellerName": "PlayActive Store",
+    "sellerEmail": "sales@playactive.com",
+    "price": 45.0,
+    "rating": 4.4,
+    "availableQuantity": 30,
+    "description": "Mini adjustable basketball set for kids to develop motor skills and enjoy outdoor fun.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/08/01/00/20/basketball-2565957_1280.jpg",
+    "subCategory": "Outdoor & Sports Toys"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Puzzle Adventure Jungle",
+    "sellerName": "BrainyKids Toys",
+    "sellerEmail": "contact@brainykids.com",
+    "price": 29.99,
+    "rating": 4.9,
+    "availableQuantity": 100,
+    "description": "Colorful jungle-themed puzzle that improves kids’ memory and focus while having fun.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2015/09/09/19/36/puzzle-932419_1280.jpg",
+    "subCategory": "Puzzles & Board Games"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Mini Kitchen Play Set",
+    "sellerName": "HappyHome Toys",
+    "sellerEmail": "hello@happyhome.com",
+    "price": 54.99,
+    "rating": 4.6,
+    "availableQuantity": 65,
+    "description": "Kids can enjoy pretend cooking with this mini kitchen set that includes utensils, stove, and dishes.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/01/22/19/20/kitchen-1997437_1280.jpg",
+    "subCategory": "Pretend Play Toys"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Stuffed Teddy Bear Jumbo",
+    "sellerName": "SoftyWorld",
+    "sellerEmail": "info@softyworld.com",
+    "price": 39.99,
+    "rating": 4.9,
+    "availableQuantity": 85,
+    "description": "Super soft and cuddly jumbo teddy bear for kids to hug, sleep with, and play. Great for gifts.",
+    "pictureURL": "https://cdn.pixabay.com/photo/2017/08/06/13/44/teddy-2593444_1280.jpg",
+    "subCategory": "Soft Toys"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "name": "All Toys"
+  },
+  {
+    "id": 1,
+    "name": "Action Figures"
+  },
+  {
+    "id": 2,
+    "name": "Building Blocks"
+  },
+  {
+    "id": 3,
+    "name": "Remote Control Toys"
+  },
+  {
+    "id": 4,
+    "name": "Educational Toys"
+  },
+  {
+    "id": 5,
+    "name": "Outdoor & Sports Toys"
+  },
+  {
+    "id": 6,
+    "name": "Dolls & Plushies"
+  },
+  {
+    "id": 7,
+    "name": "Vehicles & Cars"
+  },
+  {
+    "id": 8,
+    "name": "Musical Toys"
+  },
+  {
+    "id": 9,
+    "name": "Puzzles & Board Games"
+  },
+  {
+    "id": 10,
+    "name": "Arts & Crafts"
+  }
+]
