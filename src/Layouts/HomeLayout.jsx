@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import { Outlet } from "react-router";
 import LeftAside from "../components/HomeLayout/LeftAside";
 import RightAside from "../components/HomeLayout/RightAside";
+import Footer from "../components/Footer";
 
 function HomeLayout() {
   return (
@@ -28,8 +29,7 @@ function HomeLayout() {
         <Navbar></Navbar>
       </nav>
 
-
-    <main className="w-11/12 mx-auto my-3    grid grid-cols-12">
+      <main className="w-11/12 mx-auto my-3    grid grid-cols-12">
         {/* ------------------------Left Side------------------ */}
         <aside className="col-span-3">
           <LeftAside></LeftAside>
@@ -45,8 +45,7 @@ function HomeLayout() {
           <RightAside></RightAside>
         </aside>
       </main>
-
-
+      <Footer></Footer>
     </div>
   );
 }
