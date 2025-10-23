@@ -1,6 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import userImg from "../assets/user.png";
+import { FaLock } from 'react-icons/fa';
 
 function Navbar() {
   return (
@@ -13,7 +14,7 @@ function Navbar() {
             </div>
             <div className="login-btn flex gap-3">
                 <img src={userImg} alt="" />
-                <button className='btn btn-primary px-10'>Login</button>
+                <Link to="/auth/login" className='btn btn-error px-10'><FaLock size={20} /> <span className='text-xl'>Login</span></Link>
             </div>
         </div>
   )
