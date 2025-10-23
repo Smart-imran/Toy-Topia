@@ -29,7 +29,7 @@ function HomeLayout() {
         <Navbar></Navbar>
       </nav>
 
-      <main className="w-11/12 mx-auto my-3    grid grid-cols-12">
+      <main className="w-11/12 mx-auto my-3 gap-5 grid grid-cols-12">
         {/* ------------------------Left Side------------------ */}
         <aside className="col-span-3">
           <LeftAside></LeftAside>
