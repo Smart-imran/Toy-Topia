@@ -1,11 +1,11 @@
 import React from "react";
 
-function ToysCard({ toys }) {
+const ToysCard = ({ toys }) => {
   const { sellerName, pictureURL, sellerEmail, description } = toys;
 
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full">
-      {/* 🖼️ Image Section */}
+      {/* Image Section */}
       <div className="overflow-hidden">
         <img
           src={pictureURL}
@@ -14,7 +14,7 @@ function ToysCard({ toys }) {
         />
       </div>
 
-      {/* 📋 Content Section */}
+      
       <div className="p-5 flex flex-col gap-2">
         <h2 className="text-lg font-bold text-gray-800">{sellerName}</h2>
         <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
@@ -26,6 +26,6 @@ function ToysCard({ toys }) {
       </div>
     </div>
   );
-}
+};
 
 export default ToysCard;

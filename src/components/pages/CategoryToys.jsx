@@ -4,30 +4,30 @@ import ToysCard from "../ToysCard";
 
 const CategoryToys = () => {
   const { id } = useParams();
-  const data = useLoaderData(); // প্রতিটা ক্যাটাগরি + toys list
+  const data = useLoaderData();
 
   const [categoryToys, setCategoryToys] = useState([]);
 
   useEffect(() => {
-    // সব toys একত্র করা (nested array flatten করা)
+    
     const allToys = data.flatMap((cat) => cat.toys);
 
     if (id === "0") {
-      // সব toys দেখাও
+      //  toys 
       setCategoryToys(allToys);
     } 
     else if (id === "1") {
-      // শুধু Today's Pick toys
+      // Today's Pick toys
       const filterToys = allToys.filter((toy) => toy.is_today_pick === true);
       setCategoryToys(filterToys);
     } 
     else {
-      // নির্দিষ্ট category অনুযায়ী filter
+      //  category filter
       const category = data.find((cat) => cat.id == id);
       if (category) {
         setCategoryToys(category.toys);
       } else {
-        setCategoryToys([]); // কিছু না পেলে খালি array
+        setCategoryToys([]); 
       }
     }
   }, [data, id]);
