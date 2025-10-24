@@ -5,7 +5,8 @@ import CategoryToys from "../components/pages/CategoryToys";
 import Login from "../components/pages/LogPage/Login";
 import Register from "../components/pages/LogPage/Register";
 import AuthLayout from "../Layouts/AuthLayout";
-import ToysCardDetails from "../components/pages/ToysCardDetails";
+import ToysDetails from "../components/ToysDetails";
+
 
 const router = createBrowserRouter([
   {
@@ -39,9 +40,11 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/card-details/:id",
-    Component: ToysCardDetails,
+    path: "/card-details/:toyId",
+    Component: ToysDetails,
+    loader: () => fetch("/toys.json"),
   },
+
   {
     path: "/news",
     element: <h2>News layout</h2>,
