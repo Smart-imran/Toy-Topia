@@ -6,7 +6,7 @@ import Login from "../components/pages/LogPage/Login";
 import Register from "../components/pages/LogPage/Register";
 import AuthLayout from "../Layouts/AuthLayout";
 import ToysDetails from "../components/ToysDetails";
-
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +41,11 @@ const router = createBrowserRouter([
 
   {
     path: "/card-details/:toyId",
-    Component: ToysDetails,
+    element: (
+      <PrivateRoute>
+        <ToysDetails />
+      </PrivateRoute>
+    ),
     loader: () => fetch("/toys.json"),
   },
 

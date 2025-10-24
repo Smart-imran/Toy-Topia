@@ -19,8 +19,8 @@ function Navbar() {
   return (
     <div className="flex items-center justify-between">
       <div className="">{user && user.email}</div>
-      <div className="nav flex gap-5 font-bold text-accent">
-        <NavLink to="/">Home</NavLink>
+      <div className="nav flex gap-5 font-bold text-pink-500">
+        <NavLink to="/" >Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/career">Career</NavLink>
       </div>
