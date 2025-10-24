@@ -9,12 +9,7 @@ const SocialLogin = () => {
       <div className="grid grid-cols-1 gap-2">
         <button className="btn btn-secondary btn-outline">
           <FcGoogle size={24} /> Login With Google
-        </button>
-        <button className="btn btn-primary btn-outline">
-          {" "}
-          <FaGithub size={24} />
-          Login With Github
-        </button>
+        </button>        
       </div>
     </div>
   );

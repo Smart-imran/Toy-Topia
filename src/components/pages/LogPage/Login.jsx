@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -16,9 +18,18 @@ const Login = () => {
     setError({ email: !emailValid, password: !passwordValid });
 
     if (emailValid && passwordValid) {
-      alert("Login Successful (Demo)");
-      setEmail("");
-      setPassword("");
+      signIn(email, password)
+        .then((result) => {
+          const user = result.user;
+          console.log("Logged in user:", user);
+          alert("Login Successful");
+          setEmail("");
+          setPassword("");
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          alert(errorMessage);
+        });
     }
   };
 
@@ -39,7 +50,9 @@ const Login = () => {
               className="mt-2 w-full rounded-xl px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-300"
             />
             {error.email && (
-              <p className="text-xs text-rose-300 mt-1">Please enter a valid email address</p>
+              <p className="text-xs text-rose-300 mt-1">
+                Please enter a valid email address
+              </p>
             )}
           </div>
 
@@ -54,7 +67,7 @@ const Login = () => {
                 className="w-full rounded-xl px-4 py-3 bg-white/5 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-teal-300 pr-12"
               />
               <button
-                type="submit"
+                type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white text-sm"
               >
@@ -68,14 +81,18 @@ const Login = () => {
             )}
           </div>
 
-          
           <button
             type="submit"
             className="w-full rounded-xl py-3 font-semibold bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-900 shadow-md hover:scale-[1.01] transition-transform"
           >
             Login
           </button>
-            <p className="font-semibold text-amber-300">Don't Have an Account ? <Link className="text-white" to="/auth/register">Register Now</Link></p>
+          <p className="font-semibold text-amber-300">
+            Don't Have an Account ?{" "}
+            <Link className="text-white" to="/auth/register">
+              Register Now
+            </Link>
+          </p>
         </form>
       </div>
     </div>

@@ -5,6 +5,7 @@ import CategoryToys from "../components/pages/CategoryToys";
 import Login from "../components/pages/LogPage/Login";
 import Register from "../components/pages/LogPage/Register";
 import AuthLayout from "../Layouts/AuthLayout";
+import ToysCardDetails from "../components/pages/ToysCardDetails";
 
 const router = createBrowserRouter([
   {
@@ -36,9 +37,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
-    path: "/auth",
-    element: <h2>Authentic Route</h2>,
+    path: "/card-details/:id",
+    Component: ToysCardDetails,
   },
   {
     path: "/news",
