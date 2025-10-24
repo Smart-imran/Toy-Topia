@@ -1,5 +1,6 @@
-import React, { use, useState } from "react";
-import { Link } from "react-router";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Register = () => {
@@ -15,20 +16,10 @@ const Register = () => {
     password: false,
   });
 
-  const { createUser,setUser } = use(AuthContext);
+  const { createUser, setUser } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createUser(email, password)
-      .then((result) => {
-        const user = result.user;
-        // console.log(user);
-        setUser(user);
-      })
-      .catch((error) => {        
-        const errorMessage = error.message;
-        alert(errorMessage);
-      });
 
     let emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     let passwordValid = password.length >= 6;
@@ -42,13 +33,40 @@ const Register = () => {
       password: !passwordValid,
     });
 
-    if (nameValid && photoValid && emailValid && passwordValid) {
-      alert("Registration Successful (Demo)");
-      setName("");
-      setPhotoURL("");
-      setEmail("");
-      setPassword("");
+    if (!(nameValid && photoValid && emailValid && passwordValid)) {
+      return;
     }
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+
+        //  Alert
+        Swal.fire({
+          title: "Registration Successful 🎉",
+          text: "Your account has been created successfully!",
+          icon: "success",
+          confirmButtonText: "Cool 😎",
+          background: "#0f172a",
+          color: "#f9fafb",
+          confirmButtonColor: "#14b8a6",
+        });
+
+        // ✅ Reset form
+        setName("");
+        setPhotoURL("");
+        setEmail("");
+        setPassword("");
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Oops! 😢",
+          text: error.message,
+          icon: "error",
+          confirmButtonColor: "#ef4444",
+        });
+      });
   };
 
   return (
