@@ -54,7 +54,7 @@ const Discount2 = () => {
                 style={{ backgroundImage: `url(${slide.bg})` }}
               >
                 <h2 className="text-white text-3xl font-bold bg-black bg-opacity-40 p-3 rounded">
-                  {/* যদি title থাকে দেখাবে */}
+                 
                   {slide.title}
                 </h2>
               </div>
