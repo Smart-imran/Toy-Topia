@@ -25,7 +25,7 @@ const Discount2 = () => {
         {/* Left Arrow */}
         <button
           onClick={() => swiperRef.current.swiper.slidePrev()}
-          className="absolute top-1/2 -translate-y-1/2 left-2 z-10 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full hover:bg-opacity-80 transition"
+          className="absolute top-1/2 -translate-y-1/2 left-2 z-10 text-white text-3xl p-2 bg-pink-500 bg-opacity-50 rounded-full hover:bg-opacity-80 transition cursor-pointer"
         >
           <FaChevronLeft />
         </button>
@@ -33,7 +33,7 @@ const Discount2 = () => {
         {/* Right Arrow */}
         <button
           onClick={() => swiperRef.current.swiper.slideNext()}
-          className="absolute top-1/2 -translate-y-1/2 right-2 z-10 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full hover:bg-opacity-80 transition"
+          className="absolute top-1/2 -translate-y-1/2 right-2 z-10 text-white text-3xl p-2 bg-pink-500 bg-opacity-50 rounded-full hover:bg-opacity-80 transition cursor-pointer"
         >
           <FaChevronRight />
         </button>
