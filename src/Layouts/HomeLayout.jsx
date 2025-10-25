@@ -5,12 +5,14 @@ import LatestDiscount from "../components/LatestDiscount";
 import DiscountSwiper from "../components/DiscountSwiper";
 import Discount2 from "../components/Discount2";
 import Navbar from "../components/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import LeftAside from "../components/HomeLayout/LeftAside";
 import RightAside from "../components/HomeLayout/RightAside";
 import Footer from "../components/Footer";
+import Loading from "../components/pages/Loading";
 
 function HomeLayout() {
+  const {state} = useNavigation();
   return (
     <div>
       {/* ----------------------Head Section-------------------- */}
@@ -38,7 +40,9 @@ function HomeLayout() {
         {/* ---------------------Main Side---------------------------- */}
 
         <section className="main col-span-6">
-          <Outlet></Outlet>
+
+          {state === "loading" ? <Loading /> : <Outlet />}
+          
         </section>
         {/* -------------------------Right side--------------------------------- */}
         <aside className="col-span-3">

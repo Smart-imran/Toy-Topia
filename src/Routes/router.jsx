@@ -7,6 +7,7 @@ import Register from "../components/pages/LogPage/Register";
 import AuthLayout from "../Layouts/AuthLayout";
 import ToysDetails from "../components/ToysDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../components/pages/Loading";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         path: "/category/:id",
         Component: CategoryToys,
         loader: () => fetch("/toys.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
@@ -47,6 +49,7 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: () => fetch("/toys.json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
 
   {
