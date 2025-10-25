@@ -77,7 +77,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-teal-600 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-800 to-pink-600 p-6">
       <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl w-full max-w-md border border-white/20">
         <h1 className="text-3xl font-semibold text-white mb-2">Welcome Back</h1>
         <p className="text-sm text-white/70 mb-6">Login to your account</p>
@@ -128,7 +128,7 @@ const Login = () => {
             )}
           </div>
 
-          {/* Firebase / general error */}
+          
           {error.general && (
             <p className="text-sm text-rose-400 font-medium">{error.general}</p>
           )}
@@ -136,7 +136,7 @@ const Login = () => {
           {/* Button */}
           <button
             type="submit"
-            className="w-full rounded-xl py-3 font-semibold bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-900 shadow-md hover:scale-[1.01] transition-transform"
+            className="w-full rounded-xl py-3 font-semibold bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-800 shadow-md hover:scale-[1.01] transition-transform"
           >
             Login
           </button>

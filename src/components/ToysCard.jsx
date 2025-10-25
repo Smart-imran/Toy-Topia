@@ -21,7 +21,7 @@ const ToysCard = ({ toys }) => {
         <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
         <p className="text-xs text-gray-500 italic"><span className="text-red-500 font-bold text-sm">Price : {price} </span></p>
 
-        <Link to={`/card-details/${toyId}`} className="mt-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm text-center font-semibold py-2 rounded-lg hover:from-indigo-600 hover:to-blue-500 transition">
+        <Link to={`/card-details/${toyId}`} className="mt-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white text-sm text-center font-semibold py-2 rounded-lg hover:from-pink-600 hover:to-pink-500 transition">
           View Details
         </Link>
       </div>
